@@ -11,7 +11,9 @@ pipeline {
 
     stages {
         stage('Network to Docker') {
-            sh "docker network create ${NETWORK_PETCLINIC}"
+            steps {
+                sh "docker network create ${NETWORK_PETCLINIC}"
+            }
         }
 
         stage('Build') {
