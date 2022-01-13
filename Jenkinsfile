@@ -10,11 +10,12 @@ pipeline {
     }
 
     stages {
-        stage('Network to Docker') {
+        /*stage('Network to Docker') {
             steps {
                 sh "docker network create ${NETWORK_PETCLINIC}"
             }
         }
+        */
 
         stage('Build') {
             steps {
