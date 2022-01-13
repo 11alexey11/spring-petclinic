@@ -6,9 +6,14 @@ pipeline {
         DOCKER_HUB_REP = 'spring-petclinic'
         DOCKER_HUB_VERSION = '2.6.0-SNAPSHOT'
         JAR_PROJECT_NAME = 'spring-petclinic'
+        NETWORK_PETCLINIC = UUID.randomUUID().toString()
     }
 
     stages {
+        stage('Network to Docker') {
+            sh "docker network create ${NETWORK_PETCLINIC}"
+        }
+
         stage('Build') {
             steps {
                 echo 'Docker building'
