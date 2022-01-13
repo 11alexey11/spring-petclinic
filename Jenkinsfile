@@ -3,8 +3,8 @@ pipeline {
 
     environment {
         DOCKER_HUB_USER = 'yanvarevalexey'
-        DOCKER_HUB_REP = 'spring-petclinic'
-        DOCKER_HUB_VERSION = '2.6.0'
+        DOCKER_HUB_REP = 'petclinic'
+        DOCKER_HUB_VERSION = '2.6.0-SNAPSHOT'
         JAR_PROJECT_NAME = 'spring-petclinic'
         //NETWORK_PETCLINIC = UUID.randomUUID().toString()
     }
