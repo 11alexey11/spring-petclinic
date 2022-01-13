@@ -21,6 +21,7 @@ pipeline {
             steps {
                 echo 'Docker building'
                 script {
+                    echo "${DOCKER_HUB_USER}/${DOCKER_HUB_REP}:${DOCKER_HUB_VERSION}"
                     docker.build("${DOCKER_HUB_USER}/${DOCKER_HUB_REP}:${DOCKER_HUB_VERSION}", "--build-arg JAR_VERSION=${DOCKER_HUB_VERSION} --build-arg JAR_ARTIFACT_ID=${JAR_PROJECT_NAME} -f Dockerfile .")
                 }
             }
