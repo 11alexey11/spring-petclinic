@@ -1,5 +1,5 @@
 # Build stage
-FROM maven:3.6-jdk-11-slim AS build
+FROM maven:3.6-jdk-11-slim as BUILD
 WORKDIR /spring-petclinic
 COPY pom.xml ./
 COPY src ./src
